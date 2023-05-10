@@ -1,0 +1,37 @@
+.table {
+  border: 1px solid #e5e7e9;
+  border-collapse: collapse;
+  width: 100%;
+  border: 1;
+}
+
+th {
+  text-align: left;
+  padding: 12px 10px;
+}
+
+td {
+  text-align: left;
+  padding: 12px 10px;
+}
+
+.celled th,
+.celled td {
+  border: 1px solid #e5e7e9;
+  border-radius: 2px;
+}
+
+td,
+th {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+thead {
+  background-color: #f9fafb;
+}
+
+.striped tr:nth-child(even) {
+  background-color: #f9fafb;
+}

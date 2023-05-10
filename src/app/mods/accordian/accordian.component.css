@@ -1,0 +1,107 @@
+.accordian {
+  border: 1.2px solid #cbcdce;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px 1px #f4f5f6;
+}
+
+.dropdown {
+  margin: 0 10px 0 0;
+}
+
+.title {
+  font-weight: 500;
+  font-size: 14px;
+  margin: 14px 0;
+  cursor: pointer;
+  color: #bab5b5;
+  transition: all ease-in 200ms;
+}
+
+.activeTitle {
+  color: black !important;
+}
+
+.title:hover {
+  color: black;
+}
+
+.content {
+  border-bottom: 1px solid #cbcdce;
+  /* animation-name: expand;
+  animation-duration: 400ms;
+  animation-timing-function: ease-in;
+  animation-direction: alternate-reverse;
+  animation-fill-mode: both;
+  animation-iteration-count: 1; */
+}
+
+.disabled-content {
+  animation-name: expand;
+  animation-duration: 200ms;
+  animation-timing-function: ease-in;
+  animation-direction: reverse;
+}
+
+.active-content {
+  animation-name: expand;
+  animation-duration: 200ms;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+  animation-direction: normal;
+}
+
+.accordian > * {
+  padding: 0 20px;
+}
+
+.content p {
+  display: none;
+}
+
+.content .active {
+  display: block !important;
+  font-weight: 400;
+  font-size: 14px;
+  margin: 20px 0;
+  animation-name: fade-in;
+  animation-duration: 400ms;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+  opacity: 0.4;
+}
+
+@keyframes expand {
+  0% {
+    height: 10px;
+  }
+  20% {
+    height: 15px;
+  }
+  40% {
+    height: 20px;
+  }
+  60% {
+    height: 25px;
+  }
+  80% {
+    height: 30px;
+  }
+  100% {
+    height: 35px;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  80% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
+}

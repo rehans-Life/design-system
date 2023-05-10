@@ -1,0 +1,28 @@
+<div (click)="closeModal()" class="dimmer">
+  <!-- The Problem is that when we are clicking on the modal then that click event is moving up to the parent
+  where a listner is found and the event is triggered -->
+
+  <!-- Here whenever someone clicks on the model we stop it from going upto the parent -->
+
+  <div (click)="$event.stopPropagation()" class="modal">
+    <div class="header">
+      <ng-content select="[header]"></ng-content>
+    </div>
+    <mat-icon
+      aria-hidden="false"
+      aria-label="close icon"
+      fontIcon="close"
+      class="close"
+      (click)="closeModal()"
+    ></mat-icon>
+    <div class="content">
+      <ng-content></ng-content>
+    </div>
+    <div class="actions">
+      <ng-content select="[modalFooter]"></ng-content>
+    </div>
+    <div class="actions actions-default">
+      <button class="close-btn" (click)="closeModal()">Close Modal</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+<app-divider>Modal Component</app-divider>
+<button class="open" (click)="onClick()">Open Modal</button>
+<!-- Whenever the close event is emitted we need to call the onClick method to close the model -->
+<app-modal (close)="onClick()" *ngIf="modalOpen">
+  <div header>This is the HEADER</div>
+  <p>This is the content of the modal i hope your enjoying it bero.</p>
+  <!-- This is an empty element which is not going to be shown within the DOM-->
+  <ng-container modalFooter>
+    <button [class]="'close-btn'" (click)="onClick()">Okay Bero</button>
+    <button [class]="'close-btn'" (click)="onClick()">Okay Hehe</button>
+  </ng-container>
+</app-modal>
+<app-divider>Accordian Component</app-divider>
+<app-accordian [items]="items"></app-accordian>

@@ -1,0 +1,17 @@
+.open {
+  background-color: rgb(53, 53, 248);
+  border: none;
+  outline: none;
+  border-radius: 3px;
+  padding: 10px 14px;
+  font-weight: 600;
+  letter-spacing: 0.02rem;
+  font-size: 14px;
+  color: white;
+  cursor: pointer;
+  transition: all ease-in 200ms;
+}
+
+.open:hover {
+  box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.3);
+}

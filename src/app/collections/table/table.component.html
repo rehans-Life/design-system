@@ -1,0 +1,18 @@
+<table [ngClass]="classNames" class="table">
+  <thead>
+    <tr class="headers">
+      <th *ngFor="let header of headers">{{ header.label }}</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let record of data">
+      <td *ngFor="let header of headers">
+        {{
+          record[header.key].length > 10
+            ? (record[header.key] | slice : 0 : 10)
+            : record[header.key]
+        }}
+      </td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,13 @@
+.divider {
+  margin: 7px 0 20px 0;
+  padding: 1px;
+  width: 100%;
+  background-color: rgb(243, 237, 237);
+}
+
+/* This will always ignore the first of the app 
+dividers components and focus on the second one. */
+:host:not(:first-of-type) {
+  display: block;
+  margin-top: 20px;
+}

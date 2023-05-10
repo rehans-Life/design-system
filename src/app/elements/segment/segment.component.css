@@ -1,0 +1,21 @@
+.segment {
+  border: 3px solid rgb(243, 237, 237);
+  border-radius: 5px;
+  margin: 15px 0;
+  padding: 17px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  text-align: center;
+  margin: 20px;
+  font-weight: 700;
+  font-size: 1.15rem;
+}
+
+.header:empty {
+  display: none;
+}

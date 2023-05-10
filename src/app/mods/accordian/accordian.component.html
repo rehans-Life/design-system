@@ -1,0 +1,17 @@
+<div class="accordian styled">
+  <ng-container *ngFor="let item of items; let i = index">
+    <div
+      (click)="
+        openedItemIndex === i ? (openedItemIndex = -1) : (openedItemIndex = i)
+      "
+      class="title"
+      [ngClass]="{ activeTitle: openedItemIndex === i }"
+    >
+      <fa-icon class="dropdown" [icon]="faCaretDown"></fa-icon>
+      {{ item.title }}
+    </div>
+    <div class="content">
+      <p [ngClass]="{ active: openedItemIndex === i }">{{ item.content }}</p>
+    </div>
+  </ng-container>
+</div>

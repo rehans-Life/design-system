@@ -1,0 +1,10 @@
+<div class="segment">
+  <div class="header">
+    <!-- Through the ng-content Im selecting the content of the
+    header element that is being passed inside of the segment component
+    and rendering it here -->
+    <ng-content select="header"></ng-content>
+  </div>
+  <!-- Elements other than the header element will be rendered here -->
+  <ng-content></ng-content>
+</div>

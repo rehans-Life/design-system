@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="image-header" *ngIf="header">
+    <div class="lines">
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+  </div>
+  <div class="paragraph" *appTimes="lines; let i = index">
+    <div class="line" [ngStyle]="{ width: randomWidth() }"></div>
+  </div>
+</div>
